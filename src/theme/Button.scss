@@ -1,0 +1,180 @@
+@use "sass:list";
+@use "sass:meta";
+@use "sass:string";
+@use "sass:map";
+
+@import "./ColorTheme.scss";
+@import "./FontsTheme.scss";
+
+@mixin CustomButtonGreen{
+    display: block;margin: auto;background: #00AD62;border-radius: 4px;
+    color: white; width: 30%;height: 5%;
+}
+
+@mixin buttonStyle(
+    $borderRadius: null,
+    $background-color: null,
+    $color: null,
+    $borderSize: 1px,
+    $width: null,
+    $padding: null,
+    $margin-top: null,
+    $font-size: null
+) {
+    @if $borderRadius {
+        border-radius: $borderRadius;
+    }
+    @if $background-color {
+        background-color: $background-color;
+    }
+    @if $color {
+        color: $color;
+    }
+    @if $width {
+        width: $width;
+    }
+    @if $padding {
+        padding: $padding;
+    }
+    @if $margin-top {
+        margin-top: $margin-top;
+    }
+    @if $font-size {
+        font-size: $font-size;
+    }
+    @content;
+}
+
+@mixin buttonStyle-outline(
+    $borderRadius: null,
+    $background-color: null,
+    $color: null,
+    $borderSize: 1px,
+    $width: null,
+    $padding: null,
+    $margin-top: null,
+    $font-size: null
+) {
+    @if $borderRadius {
+        border-radius: $borderRadius;
+    }
+    @if $background-color {
+        background-color: $color;
+    }
+    @if $color {
+        color: $background-color;
+    }
+    @if width {
+        width: $width;
+    }
+    @if $padding {
+        padding: $padding;
+    }
+    @if $margin-top {
+        margin-top: $margin-top;
+    }
+    @if font-size {
+        font-size: font-size;
+    }
+    @content;
+    border: $borderSize solid $color-primary;
+}
+
+/*
+3 types of button styles are explained
+- small and rounded-edgge
+- medium and rounded-edge
+- large and rounded-edge
+*/
+$Style1: (
+    borderRadius: 50%,
+    background-color: $color-primary,
+    color: $color-primary-contrast,
+    padding: 5px,
+    font-size: $font-size-M,
+);
+
+$Style2: (
+    borderRadius: 50%,
+    background-color: $color-primary-mango,
+    color: $color-primary-contrast,
+    padding: 5px,
+    font-size: $font-size-M,
+);
+
+$Style-btn-M-R: (
+    borderRadius: 5px,
+    background-color: $color-primary,
+    color: $color-primary-contrast,
+    width: 50%,
+    padding: 10px,
+    font-size: $font-size-M,
+);
+
+$Style-btn-Man-R: (
+    borderRadius: 5px,
+    background-color: $color-primary-contrast-mango,
+    color: $color-primary-contrast,
+    width: 50%,
+    padding: 10px,
+    font-size: $font-size-M,
+);
+
+
+$Style-btn-L-R: (
+    borderRadius: 5px,
+    background-color: $color-primary,
+    color: $color-primary-contrast,
+    width: 80%,
+    padding: 10px,
+    font-size: $font-size-M,
+);
+
+
+.btn_custom_green{
+    @include CustomButtonGreen;
+}
+
+.btnSmallAndRound {
+    @include buttonStyle($Style1...);
+    padding: map-get($Style-btn-L-R, "padding");
+}
+
+.btnSmallAndRound-outline {
+    @include buttonStyle-outline($borderSize: 2px, $Style1...);
+}
+
+
+//este
+.btnMediumRound {
+    @include buttonStyle($Style-btn-M-R...);
+    &:active{
+        filter: brightness(0.8);
+    }
+}
+
+.btnMediumRound-mango {
+    @include buttonStyle($Style-btn-Man-R...);
+    &:active{
+        filter: brightness(0.8);
+    }
+}
+
+.btnMediumRound-outline {
+    @include buttonStyle-outline($Style-btn-M-R...);
+}
+.btnLargeRound {
+    @include buttonStyle($Style-btn-L-R...);
+}
+
+.btnLargeRound-outline {
+    @include buttonStyle-outline($Style-btn-L-R...);
+}
+
+.btnTramitar {
+    @extend .btnMediumRound;
+    position: fixed;
+    bottom: 5vh;
+  }
+
+

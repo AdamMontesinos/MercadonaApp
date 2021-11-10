@@ -1,0 +1,120 @@
+/*
+font related paramters
+*/
+
+@import "../../../theme/FontsTheme.scss";
+/*
+Color related parameters
+*/
+@import "../../../theme/ColorTheme.scss";
+/*
+Image related configurations
+*/
+@import "../../../theme/ImageTheme.scss";
+$avatar-width: 20;
+/* 
+Buttons
+*/
+@import "../../../theme/Button.scss";
+/*
+General variables 
+*/
+@import "../../../theme/General.scss";
+
+.imgContainer{
+  width: auto;
+  @extend .displayFlex;
+  img{
+    height: 30vh;
+    max-height: 40vh;
+    width: auto;
+  }
+}
+.title-Wrapper{
+  .nombreproducto{
+    @include centerContent();
+    color: $font-color-main;
+    margin-top:10px;
+  }
+}
+.tableContainer{
+  padding-top: 5px;
+  padding-bottom:5px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 10vh;
+  border: 1px Solid $font-color-main;
+  td, th {
+    text-align: left;
+    padding: 8px; 
+  }
+  td:nth-child(odd) {
+    color: white;
+    background-color:$font-color-main;
+  }
+  tr:not(tr:last-child) > td:last-child{
+    border-bottom: 1px dashed $font-color-main;
+  }
+}
+
+.sticky{
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 5vh;
+}
+
+.btnAddCart{
+    @extend .btnMediumRound;
+    margin: 10px 0px;
+}
+
+.bottomBorder{
+  border-bottom: 1px solid $font-color-main;
+  margin-bottom: 10px;
+}
+
+
+
+
+// .nombreproducto{
+//     @include centerContent();
+//     font-family: $font-family-1;
+//     font-size: $font-size-XL;
+//     font-weight: $font-weight-bold;
+//     margin-top: 5%;
+// }
+
+// .marcaproducto{
+//     @include centerContent();
+//     font-family: $font-family-1;
+//     font-size: $font-size-L;
+//     font-weight: $font-weight-bold;
+//     margin-top: 0%;
+// }
+
+// .text1{
+//     @include centerContent();
+//     font-family: $font-family-1;
+//     font-size: $font-size-L;
+//     color: $font-color-gray;
+//     text-align:center;
+//     margin-top: 5%;
+// }
+
+// .precio{
+//     margin-left: 65%;
+//     font-family: $font-family-1;
+//     font-size: $font-size-XL;
+//     font-weight: $font-weight-bold;
+//     color: #212121
+// }
+
+// .infobutton{
+//     margin-left: 40%;
+//     margin-top: 5%;
+//     height: 45px;
+//     width: 75px;
+// }

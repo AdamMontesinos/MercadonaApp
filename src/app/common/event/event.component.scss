@@ -1,0 +1,21 @@
+
+.redColor{
+  color: red;
+}
+.greenColor{
+  color: green;
+}
+.icon{
+  font-size:16px;
+  color: green;
+}
+.imgContainer{
+  display: flex;
+  flex:1;
+}
+
+.imgproducto {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}

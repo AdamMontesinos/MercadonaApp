@@ -1,0 +1,115 @@
+/*
+font related paramters
+*/
+
+@import "../../../theme/FontsTheme.scss";
+/*
+Color related parameters
+*/
+@import "../../../theme/ColorTheme.scss";
+/*
+Image related configurations
+*/
+@import "../../../theme/ImageTheme.scss";
+$avatar-width: 20;
+/* 
+Buttons
+*/
+@import "../../../theme/Button.scss";
+/*
+General variables 
+*/
+@import "../../../theme/General.scss";
+
+.productContainer {
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+        overflow: auto;
+        max-height:70vh;
+}
+.btnDelete {
+        width: 50%;
+        background-color: white;
+}
+.iconDelete {
+        color: $font-color-gray;
+}
+.imgProduct{
+        width: max-content;
+}
+.products {
+        border-bottom: 2px solid lightgray;
+
+}
+div.item-inner{
+        padding:0px;
+}
+.btnIcon {
+        border-color: lightgray !important;
+        @extend .header-L;
+        border-radius: 35%;
+        font-size:30px;
+        background-color: $color-primary;
+        color: $color-primary-contrast;
+        padding: 5px;
+        font-size: $font-size-M;
+}
+
+.btnIcon-mango {
+        border-color: lightgray !important;
+        @extend .header-L;
+        border-radius: 35%;
+        font-size:30px,;
+        background-color: $color-primary-mango;
+        color: $color-primary-contrast;
+        padding: 5px;
+        font-size: $font-size-M;
+}
+
+.btnIcon-miquel {
+        border-color: lightgray !important;
+        @extend .header-L;
+        border-radius: 35%;
+        font-size:30px,;
+        background-color: $color-primary-miquel;
+        color: $color-primary-contrast;
+        padding: 5px;
+        font-size: $font-size-M;
+}
+
+
+.pricetxt {
+        font-size: $font-size-M;
+        font-weight: $font-weight-bold;
+}
+.productName {
+        @extend .header-M;
+}
+.containerQuantityButtons {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+}
+
+.btnTramitar {
+        @extend .btnMediumRound;
+        position: fixed;
+        bottom: 5vh;
+        background-color: $color-primary;
+}
+
+.btnTramitar-mango {
+        @extend .btnMediumRound;
+        position: fixed;
+        bottom: 5vh;
+        background-color: $color-primary-contrast-mango;
+}
+
+.btnTramitar-miquel {
+        @extend .btnMediumRound;
+        position: fixed;
+        bottom: 5vh;
+        background-color: $color-primary-contrast-miquel;
+}
+

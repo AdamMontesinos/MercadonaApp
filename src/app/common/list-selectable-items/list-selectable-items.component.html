@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding ion-padding-horizontal">
+  <ion-header class="ion-no-border displayFlex">
+    <div style="width:10%">
+     
+    </div>
+    <div class="header-L displayFlex" style="width:80%">{{TitlePage}}</div>
+    <div style="width:10%"></div>
+  </ion-header>
+
+  <ion-content collapse="condense" fullscreen="false" class="ion-no-border">
+
+    <div  class="productsContainer">
+     
+      <div *ngFor="let product of ProductList" class="product-wrap displayFlexCol">
+        <img [src]="product.url" style="height:70%" (click)="onClicka( product)">
+        <p class="ion-no-margin"><b>{{product.name}} </b></p>
+        <input [id]="product.id" style=" border-radius: 50%;" type="checkbox" [checked]="checkifInCart(product)" >
+      
+      </div>
+    </div>
+  </ion-content>
+
+  <h1>ola: {{filter_from_home_page}}</h1>
+
+  <div class="displayFlex">
+    <button (click)="dismiss()" slot="end" class="btnContinuar">Continuar</button>
+  </div>
+
+</ion-content>
+
+

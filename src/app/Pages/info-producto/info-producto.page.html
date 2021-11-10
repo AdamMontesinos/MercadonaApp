@@ -1,0 +1,51 @@
+<app-header pageName="Producto" backUrl="/tabs/Home/productos"></app-header>
+
+<ion-content [fullscreen]="true" class=" ion-padding-horizontal">
+  <div>
+    <div class="imgContainer ">
+      <img class="imgproducto " [src]="product.url">
+    </div>
+    <div class="title-Wrapper">
+      <h1 class="nombreproducto">{{product.name}}</h1>
+    </div>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <col style="width:30%">
+      <col style="width:70%">
+      <tr>
+        <td>Marca</td>
+        <td>Mercadona</td>
+      </tr>
+      <tr>
+        <td>Descripción</td>
+        <td>{{product.description}}</td>
+      </tr>
+      <tr>
+        <td>Precio</td>
+        <td>{{product.price}}&#8364;</td>
+      </tr>
+      <tr>
+        <td>Información Nutricional <ion-icon class="infobutton" (click)="presentAlert()"
+            name="information-circle-outline"></ion-icon>
+        </td>
+        <td>
+          Tamaño de la Porción 100g
+          <ul>
+            <li>Energía 75kj </li>
+            <li>Grasa 0,2g </li>
+            <li>Proteína 0,88g </li>
+            <li>Colesterol 0mg </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="displayFlex sticky">
+    <button slot="end" class="btnAddCart" (click)="btnAnadirCarrito()">Añadir al carrito</button>
+  </div>
+
+
+
+</ion-content>

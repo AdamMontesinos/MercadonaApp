@@ -1,0 +1,26 @@
+@import "../../../theme/Button.scss";
+
+
+div{width: 50%;margin: auto;}
+h1{text-align: center;}
+img{display: block;margin: auto;}
+
+
+.btnTramitar {
+    @extend .btnMediumRound;
+    position: fixed;
+    bottom: 5vh;
+}
+  
+.btnTramitar-mango {
+    @extend .btnMediumRound-mango;
+    position: fixed;
+    bottom: 5vh;
+}
+
+.btnTramitar-miquel {
+    @extend .btnMediumRound;
+    position: fixed;
+    bottom: 5vh;
+    background-color: $color-primary-contrast-miquel;
+  }

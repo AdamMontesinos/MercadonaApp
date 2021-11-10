@@ -1,0 +1,12 @@
+@mixin centerContent{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    @content; 
+}
+
+.displayFlex{ @include centerContent()}
+.displayFlexCol{
+    @include centerContent(){
+    flex-direction: column;}
+}

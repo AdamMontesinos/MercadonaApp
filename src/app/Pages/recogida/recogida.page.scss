@@ -1,0 +1,36 @@
+@import "../../../theme/Inputs_Theme.scss";
+@import "../../../theme/Button.scss";
+@import "../../../theme/FontsTheme.scss";
+@import "../../../theme/ColorTheme.scss";
+
+
+.btnTramitar {
+  @extend .btnMediumRound;
+  position: fixed;
+  bottom: 5vh;
+}
+
+.btnTramitar-mango {
+  @extend .btnMediumRound-mango;
+  position: fixed;
+  bottom: 5vh;
+}
+
+.btnTramitar-miquel {
+  @extend .btnMediumRound;
+  position: fixed;
+  bottom: 5vh;
+  background-color: $color-primary-contrast-miquel;
+}
+
+.borde{
+  border-color: $font-color-main;
+}
+
+.borde_mango{
+  border-color: $font-color-main-mango;
+}
+
+.visited{
+  border:2px solid  $font-color-main;
+}

@@ -1,0 +1,16 @@
+@mixin input_without_placeholder{
+    margin: auto;background: #FFFFFF;
+    border:  2px solid lightgray ;box-sizing: border-box;border-radius: 6px;margin-bottom: 20px;
+}
+@mixin input_with_placeholder {
+    margin: auto;height: 40px;background: #FFFFFF;
+    border: 2px solid lightgray;box-sizing: border-box;border-radius: 6px;margin-bottom: 20px;
+}
+
+
+.input_with_placeholder{
+    @include input_with_placeholder;
+}
+.input_without_placeholder{
+    @include input_without_placeholder;
+}

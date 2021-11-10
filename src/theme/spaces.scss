@@ -1,0 +1,19 @@
+$paddingDirection:('right','left','top','bottom');
+$paddingLength:(5,10,15,30,45,50);
+
+@each $dir in $paddingDirection{
+  @each $len in $paddingLength{
+    .padding-#{$dir}-#{$len}{ padding-#{$dir}: #{$len}px;}
+  }
+}
+
+.padding-vertical{
+  @extend .padding-top-10;
+  @extend .padding-bottom-10;
+}
+
+.padding-horitzontal{
+  @extend .padding-top-10;
+  @extend .padding-bottom-10;
+}
+

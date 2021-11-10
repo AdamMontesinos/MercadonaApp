@@ -1,0 +1,44 @@
+div{width: 50%;margin: auto;}
+h1{text-align: center;}
+img{display: block;margin: auto;}
+
+/*
+font related paramters
+*/
+
+@import "../../../theme/FontsTheme.scss";
+/*
+Color related parameters
+*/
+@import "../../../theme/ColorTheme.scss";
+/*
+Image related configurations
+*/
+@import "../../../theme/ImageTheme.scss";
+$avatar-width: 20;
+/* 
+Buttons
+*/
+@import "../../../theme/Button.scss";
+/*
+General variables 
+*/
+@import "../../../theme/General.scss";
+
+
+.text4 {
+    @include centerContent();
+    font-family: $font-family-2;
+    font-size: $font-size-L;
+    font-weight: $font-weight-bold;
+    line-height: 60px;
+    color: green;
+}
+.text7 {
+    @include centerContent();
+    font-family: $font-family-2;
+    font-size: $font-size-L;
+    font-weight: $font-weight-bold;
+    line-height: 10px;
+    color: #212121;
+}

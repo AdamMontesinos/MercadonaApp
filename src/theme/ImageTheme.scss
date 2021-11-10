@@ -1,0 +1,61 @@
+/*
+Contains classes related to the images
+- Avatar in middle with round border
+- Image for a card
+- Avatar small size photo
+    . pull right or left
+*/
+$img-Size-Small: 20%;
+$img-Size-Medium: 40%;
+$img-Size-Large: 60%;
+
+$Style-img-S-R : (width:30%, height:50%, borderRadius: 50%);
+$Style-img-M-R : (width:60%, height:50%, borderRadius: 50%);
+$Style-img-L-R : (width:80%, height:80%, borderRadius: 50%);
+
+
+@mixin image($width:100%, $height: 100%, $margin:0 , $borderRadius: null){
+    width:$width;
+    height: $height;
+    @if margin!=0 { margin:$margin  }
+    @if borderRadius { border-radius: $borderRadius}
+    @content;
+}
+
+
+.imageMediumRound{
+    @include image($Style-img-M-R...);
+    &Left{
+        float:left;
+        @include image($Style-img-M-R...);
+    }   
+    &Right{
+        @include image($Style-img-M-R...);
+        float:right;
+    }
+}
+
+.imageSmallRound{
+    @include image($Style-img-S-R...);
+    &Left{
+        float:left;
+        @include image($Style-img-S-R...);
+    }   
+    &Right{
+        @include image($Style-img-S-R...);
+        float:right;
+    }
+}
+
+.imageLargeRound{
+    @include image($Style-img-L-R...);
+    &Left{
+        float:left;
+        @include image($Style-img-L-R...);
+    }   
+    &Right{
+        @include image($Style-img-L-R...);
+        float:right;
+    }
+}
+

@@ -1,0 +1,11 @@
+@import "../../../theme/Button.scss";
+
+.bottom-border{
+        border-bottom: 1px solid lightgray;
+}
+
+.btnTramitar {
+        @extend .btnMediumRound;
+        position: fixed;
+        bottom: 5vh;
+}

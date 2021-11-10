@@ -1,0 +1,23 @@
+
+@import "../../../theme/General.scss";
+@import "../../../theme/Inputs_Theme.scss";
+@import "../../../theme/FontsTheme.scss";
+
+.li-inner{
+  @extend .displayFlex;
+  justify-content: space-between; 
+  height: 30px;
+
+}
+.buttons{
+  position: fixed;
+  bottom: 5vh;
+  width:90%
+}
+.productsListContainer{
+  margin-right: 5vw
+}
+.visited {
+  border: 2px solid $font-color-main;
+}
+

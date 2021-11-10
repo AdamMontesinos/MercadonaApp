@@ -1,0 +1,100 @@
+body {
+    background-color: black;
+}
+  
+h1 {
+    color: white;
+    text-align: center;
+    font-family: verdana;
+}
+  
+p {
+    color: white;
+    text-align: center;
+    font-family: verdana;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+  }
+
+li {
+    display: inline;
+    float: left;
+}
+
+a {
+    display: block;
+    padding: 8px;
+    background-color: blue;
+  }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(29, 0, 109);
+  }
+
+.redborder {
+    border-style: solid;
+    border-color: red;
+    border-radius: 5px;
+    margin: 50px 50px 50px 50px;
+    padding: 10px 10px 10px 10px;
+  }
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+div{
+    margin: auto;
+    width: 80%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+table, tr, th {
+    border: 1px solid yellow;
+    color: yellow;
+    
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+  }
+
+th {
+    background-color: yellow;
+    color: black;
+    
+  }
+
+/////////////////////////////////
+
+.title {
+    position: relative;
+    padding-top: 40px;
+}
+
+
+

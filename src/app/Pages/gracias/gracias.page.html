@@ -1,0 +1,19 @@
+<ion-header>
+</ion-header>
+<ion-content [style]="style" class="ion-padding">
+  <div style="margin-top: 10vh; width: 100%">
+    <img [src]="img_app" alt="mercadona_logo">
+    <h1>Gracias Alex</h1>
+    <div style="width: 100%">
+      <h3>Muchas gracias Alex por realizar tu compra con nosotros.Tu compra ha sido
+        asignada al Locker Nª A20.
+        para retirarlo solo debes acercar tu móvil al sensor NFC.
+        <br><br>Si necesitas ayuda,pulsa la opción:<a>contactar empleado</a> y te ayudaremos
+      </h3>
+    </div>
+  </div>
+  <div class="displayFlex">
+    <button (click)="RegresarAHome()" slot="end" [ngClass]="buttonStyle" >Seguir Comprando</button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,43 @@
+<app-header pageName="Menú" backUrl="home"></app-header>
+
+<ion-content class="ion-padding-horizontal">
+  <div class="productsListContainer">
+    <ul style="margin: 50px 0px;">
+      <li *ngFor="let product of ProductList">
+        <div class="li-inner  ">
+          <p class="description-M">{{product.name}}</p>
+          <p class="header-M">{{product.price}}&#8364;</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div name="recogida">
+    
+    <span class="header-L">Centro de recogida:</span>
+    <ion-select [ngClass]="{'visited':SelectedDeliveryLocId+1}"   [(ngModel)]="SelectedDeliveryLocId" class="input_without_placeholder">
+      <ion-select-option *ngFor="let location of DeliveryLocations; index as i " [value]="i">
+        {{location.street}},{{location.city}}, {{location.postal}}
+      </ion-select-option>
+    </ion-select>
+
+    <ion-label class="header-L">Hora estimada de la recogida:</ion-label>
+    <ion-select [ngClass]="{'visited':SelectedDeliveryHourId+1}"   [(ngModel)]="SelectedDeliveryHourId" class="input_without_placeholder">
+      <ion-select-option *ngFor="let time of DeliveryHours; index as i" [value]="i">
+        {{time.mintime}} - {{time.maxtime}}
+      </ion-select-option>
+    </ion-select>
+
+  </div>
+
+  <div class="displayFlexCol buttons ">
+    <ion-chip outline color="success">
+      <ion-label class="header-M">
+        Total: {{TotalPrice}}&#8364;
+      </ion-label>
+    </ion-chip>
+    <button class="btnMediumRound" (click)="payOut()">Tramitar el pedido</button>
+
+  </div>
+
+</ion-content>

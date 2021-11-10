@@ -1,0 +1,43 @@
+<app-header pageName="Tramitar el pedido" backUrl="/tabs/Cart"></app-header>
+
+<ion-content class="ion-padding">
+
+  <!-- <ion-label class="header-M">Centro de recogida:</ion-label>
+  <input type="text" style="width:100%" class="input_with_placeholder" placeholder="Avinguda Parallel 120 1 1 Barcelona">
+   -->
+  <ion-label class="header-L">Centro de recogida:</ion-label>
+  <ion-select [ngClass]="bordes" [(ngModel)]="SelectedDeliveryLocId" class="input_without_placeholder">
+    <ion-select-option *ngFor="let location of DeliveryLocations; index as i " [value]="i">
+      {{location.street}},{{location.city}}, {{location.postal}}
+    </ion-select-option>
+  </ion-select>
+
+  <ion-label class="header-M">Tipo de recogida:</ion-label>
+  <ion-select  [ngClass]="bordes" [(ngModel)]="Servicio" okText="Okay" cancelText="Cancel" class="input_without_placeholder" (ionChange)="CambioParking(Servicio)">
+    <ion-select-option value="Parking">Parking</ion-select-option>
+    <ion-select-option value="Click">Click & Collect</ion-select-option>
+  </ion-select>
+
+  <ion-label class="header-M">Matrícula</ion-label>
+  <span>(Optional)</span>
+  <ion-select  [ngClass]="bordes" [(ngModel)]="SelectedMatricula" class="input_without_placeholder">
+    <ion-select-option *ngFor="let item of lista_matricula" value="brown">{{item}}</ion-select-option>
+  </ion-select>
+
+  <ion-label class="header-L">Hora de recogida:</ion-label>
+  <ion-select [interfaceOptions]="PopoverOptions"  interface="popover" [ngClass]="bordes" [(ngModel)]="SelectedDeliveryHourId"  class="input_without_placeholder">
+    <ion-select-option *ngFor="let time of DeliveryHours; index as i" [value]="i">
+      {{time.mintime}} - {{time.maxtime}}
+    </ion-select-option>
+  </ion-select>
+
+  <!-- <ion-label class="header-M">Hora de recogida:</ion-label>
+  <ion-select class="input_without_placeholder">
+    <ion-select-option *ngFor="let item of DeliveryTimes" value="brown">{{item.mintime}}</ion-select-option>
+  </ion-select> -->
+
+  <div class="displayFlex">
+    <button [ngClass]="button_trami_reco" (click)="clickBtnContinuar()">Continuar</button>
+  </div>
+
+</ion-content>

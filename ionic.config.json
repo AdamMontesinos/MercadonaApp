@@ -1,0 +1,7 @@
+{
+  "name": "MercaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

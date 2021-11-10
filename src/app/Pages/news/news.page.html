@@ -1,0 +1,19 @@
+<app-header pageName="Próximos lanzamientos" backUrl="home"></app-header>
+
+<ion-content fullscreen="true" class="ion-padding-horizontal">
+
+  <app-product-card2 *ngFor="let news of allNews" [news]="news" class="productCard"></app-product-card2>
+</ion-content>
+
+<ion-footer translucent="false" class="displayFlex ion-no-border" style="background-color: white;">
+  
+    <ion-tab-button >
+      <span class="material-icons-outlined"> location_on </span> 
+      <ion-label >Get Directions</ion-label>
+    </ion-tab-button>
+    <ion-tab-button >
+      <span class="material-icons-outlined"> share </span> 
+      <ion-label >Share</ion-label>
+    </ion-tab-button>
+
+</ion-footer>

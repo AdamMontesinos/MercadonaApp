@@ -1,0 +1,221 @@
+/*
+font related paramters
+*/
+
+@import "../../../theme/FontsTheme.scss";
+/*
+Color related parameters
+*/
+@import "../../../theme/ColorTheme.scss";
+/*
+Image related configurations
+*/
+@import "../../../theme/ImageTheme.scss";
+$avatar-width: 20;
+/* 
+Buttons
+*/
+@import "../../../theme/Button.scss";
+/*
+General variables 
+*/
+@import "../../../theme/General.scss";
+@import "../../../theme/Inputs_Theme.scss";
+
+html {
+  font-family: $font-family-1;
+  color: $font-color-main;
+}
+
+.imgLogo {
+  margin-top: 20%;
+}
+
+.homeScreen {
+  padding: 0px 15px;
+}
+
+.welcome {
+  @include centerContent();
+  font-family: $font-family-2;
+  font-size: $font-size-XL;
+  font-weight: $font-weight-bold;
+  line-height: 60px;
+  color: #212121;
+}
+
+.description {
+  @include centerContent();
+  font-family: $font-family-2;
+  font-size: $font-size-S;
+  color: $font-color-gray;
+}
+.buttonDiv {
+  margin-top: 5vh;
+  width: 100%;
+  @include centerContent {
+    align-content: space-between;
+    flex-direction: column;
+  }
+  font-size: $font-size-S;
+}
+
+//SON LOS 2 BOTONES DE LA PAGINA LOGIN
+.main-button {
+  @include buttonStyle($width: 60%, $margin-top: 5%, $padding: 6px 16px, $borderRadius: 4px, $font-size: 16px);
+  background-color: $color-primary;
+  color: $color-primary-contrast;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  @include buttonStyle-outline($width: 60%, $margin-top: 5%, $padding: 6px 16px, $borderRadius: 4px, $font-size: 16px);
+  background-color: $color-primary-contrast;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+}
+
+.main-button-mango {
+  @include buttonStyle($width: 60%, $margin-top: 5%, $padding: 6px 16px, $borderRadius: 4px, $font-size: 16px);
+  background-color: $color-primary-mango;
+  color: $color-primary-contrast;
+  flex-wrap: wrap;
+}
+
+.main-button-miquel {
+  @include buttonStyle($width: 60%, $margin-top: 5%, $padding: 6px 16px, $borderRadius: 4px, $font-size: 16px);
+  background-color: $color-primary-miquel;
+  color: $color-primary-contrast;
+  flex-wrap: wrap;
+}
+
+.main-button-mango2 {
+  @include buttonStyle($width: 60%, $margin-top: 5%, $padding: 6px 16px, $borderRadius: 4px, $font-size: 16px);
+  background-color: $color-primary-contrast-mango;
+  color: $color-primary-contrast;
+  flex-wrap: wrap;
+}
+
+.main-button-miquel2 {
+  @include buttonStyle($width: 60%, $margin-top: 5%, $padding: 6px 16px, $borderRadius: 4px, $font-size: 16px);
+  background-color: $color-primary-contrast-miquel;
+  color: $color-primary-contrast;
+  flex-wrap: wrap;
+}
+
+.knownPerson {
+  margin-top: 5vh;
+  @include centerContent();
+  flex-direction: column;
+}
+.iconopersona {
+  width: $avatar-width * 1%;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  filter: drop-shadow(0 0 1px rgba(48, 49, 51, 0.05)), drop-shadow(0 2px 4px rgba(48, 49, 51, 0.1));
+  border-radius: 100px;
+}
+.noeresuser {
+  float: right;
+  color: $font-color-gray;
+  margin: none;
+  font-family: $font-family-1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size-S;
+}
+
+@media screen and (min-width: 700px) {
+  .welcome {
+    @include centerContent();
+    font-family: $font-family-1;
+    font-size: $font-size-XL;
+    font-weight: $font-weight-bold;
+    line-height: 60px;
+    color: #212121;
+  }
+  .imgLogo {
+    margin-top: 20vh;
+    width: 20vh;
+  }
+
+  .description {
+    @include centerContent();
+    font-family: $font-family-1;
+    font-size: $font-size-S;
+    color: $font-color-gray;
+  }
+
+  .buttonDiv {
+    margin-top: 5vh;
+    width: 100%;
+    @include centerContent {
+      align-content: space-between;
+      flex-direction: column;
+    }
+    font-size: $font-size-S;
+  }
+
+  .main-button {
+    @include buttonStyle($width: 420px, $margin-top: 5vh, $padding: 6px 16px, $borderRadius: 4px, $font-size: 16px);
+    background-color: $color-primary;
+    color: $color-primary-contrast;
+    flex-wrap: wrap;
+  }
+  .secondary-button {
+    @include buttonStyle-outline(
+      $width: 420px,
+      $margin-top: 5vh,
+      $padding: 6px 16px,
+      $borderRadius: 4px,
+      $font-size: 16px
+    );
+    background-color: $color-primary-contrast;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+  .main-button-mango {
+    @include buttonStyle($width: 420px, $margin-top: 5vh, $padding: 6px 16px, $borderRadius: 4px, $font-size: 16px);
+    background-color: $color-primary-mango;
+    color: $color-primary-contrast;
+    flex-wrap: wrap;
+  }
+  .secondary-button-mango {
+    @include buttonStyle-outline(
+      $width: 420px,
+      $margin-top: 5vh,
+      $padding: 6px 16px,
+      $borderRadius: 4px,
+      $font-size: 16px
+    );
+    background-color: $color-primary-contrast-mango;
+    color: $color-primary-contrast;
+    border: 1px solid $color-primary;
+  }
+
+  .knownPerson {
+    margin-top: 5vh;
+    @include centerContent();
+    flex-direction: column;
+  }
+  .iconopersona {
+    width: $avatar-width * 0.5vh;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 1px rgba(48, 49, 51, 0.05)), drop-shadow(0 2px 4px rgba(48, 49, 51, 0.1));
+    border-radius: 100px;
+  }
+  .noeresuser {
+    margin: none;
+    float: right;
+    color: $font-color-gray;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size-S;
+  }
+  .visited{
+    @include centerContent();
+    border:2px solid  $font-color-main;
+  }
+}

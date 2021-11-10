@@ -1,0 +1,10 @@
+<div class="imageContainer">
+  <img class="imgproducto" [src]="producto.url" (click)="showProductDetails()">
+</div>
+
+<div>
+  <h1 [ngClass]="text_name">{{producto.name}}</h1>
+  <h1 class="text2">{{producto.description}}</h1>
+  <h1 class="text3">{{producto.originalprice}}&#8364;</h1>
+  <button [ngClass]="button_plus" (click)="AddProductToCart()">+</button>
+</div>

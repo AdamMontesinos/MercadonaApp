@@ -1,0 +1,119 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="containerProfilePage ion-padding-horizontal">
+
+  <ion-header class="ion-no-border displayFlex">
+    <div style="width:10%">
+      <ion-buttons slot="start">
+        <ion-menu-button color="dark"></ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div class="header-L displayFlex" style="width:80%">Profile</div>
+    <div style="width:10%"></div>
+  </ion-header>
+
+
+ <!--Son el cuadro con la imagen del usuario y su nombre--> 
+  <div class="containerAvatar">
+    <ion-avatar class="imageSmallRound">
+      <img src="../../assets/imgs/paisaje.jpg">
+    </ion-avatar>
+    <ion-label class="LabelAvatar">
+      Hola, Alex.
+    </ion-label>
+  </div>
+
+  <ion-list lines="none">
+
+    <ion-row class="padding-vertical padding-hortizontal bottom-border">
+      <ion-col size="1.5">
+        <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/list">
+          shopping_bag
+        </span>
+      </ion-col>
+      <ion-col size="9" >
+        <ion-label class="header-M">Mis Compras 
+          <p class="description-S">El producto del año<p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1.5" >
+        <span  [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/list">
+          chevron_right
+        </span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="padding-vertical padding-hortizontal bottom-border">
+      <ion-col size="1.5">
+        <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/list">
+          local_offer
+        </span>
+      </ion-col>
+      <ion-col size="9" >
+        <ion-label class="header-M">Ofertas
+          <p class="description-S">Las mejores ofertas<p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1.5" >
+        <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/list">
+          chevron_right
+        </span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="padding-vertical padding-hortizontal bottom-border">
+      <ion-col size="1.5">
+        <ion-icon [ngClass]="etiqueta_uno" name="cart"></ion-icon>
+      </ion-col>
+      <ion-col size="9" >
+        <ion-label class="header-M">Cupones
+          <p class="description-S">Nuevos cupones disponibles<p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1.5" >
+        <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/list">
+          chevron_right
+        </span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="padding-vertical padding-hortizontal bottom-border">
+      <ion-col size="1.5" > 
+        <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/events"> event_available </span> </ion-col>
+      <ion-col size="9" >
+        <ion-label class="header-M">Eventos
+          <p class="description-S">El mejor evento del año<p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1.5" > <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/events"> chevron_right </span> </ion-col>
+    </ion-row>
+    
+    <ion-row class="padding-vertical padding-hortizontal bottom-border">
+      <ion-col size="1.5" > 
+        <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/list"> settings </span> </ion-col>
+      <ion-col size="9" >
+        <ion-label class="header-M">Servicios
+          <p class="description-S">El mejor evento del año<p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1.5" > <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/list"> chevron_right </span> </ion-col>
+    </ion-row>
+
+    <ion-row class="padding-vertical padding-hortizontal bottom-border">
+      <ion-col size="1.5" > 
+        <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/news"> redeem </span> </ion-col>
+      <ion-col size="9" >
+        <ion-label class="header-M">Novedades
+          <p class="description-S">El mejor evento del año<p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1.5" > <span [ngClass]="etiqueta_uno" routerDirection="forward" routerLink="/news"> chevron_right </span> </ion-col>
+    </ion-row>
+
+  </ion-list>
+
+</ion-content>

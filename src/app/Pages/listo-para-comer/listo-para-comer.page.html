@@ -1,0 +1,44 @@
+<app-header pageName="Listo para comer" backUrl="home"></app-header>
+<ion-content class="ion-padding ion-padding-horizontal">
+  <ion-list lines="none" class="ion-padding">
+
+    <ion-row  class="padding-vertical padding-hortizontal bottom-border">
+      <ion-col size="10.5" >
+        <ion-label class="header-M">Pizzas a tu gusto
+          <p class="description-S">El producto del año<p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1.5" >
+        <span class="material-icons iconProfile" (click)="presentModal(0)">
+          chevron_right
+        </span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row  class="padding-vertical padding-hortizontal bottom-border">
+      <ion-col size="10.5" >
+        <ion-label class="header-M">Bebidas
+          <p class="description-S">El producto del año<p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1.5" >
+        <span class="material-icons iconProfile" (click)="presentModal(1)">
+          chevron_right
+        </span>
+      </ion-col>
+    </ion-row>
+
+  </ion-list>
+  
+
+
+  
+  <div class="displayFlex">
+    <button *ngIf="ProductInCartBool" class="btnTramitar"  routerLink="/checkout">
+      Tramitar el pedido
+    </button>
+  </div>
+
+
+
+</ion-content>

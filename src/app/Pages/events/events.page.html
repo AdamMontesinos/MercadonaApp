@@ -1,0 +1,8 @@
+
+<app-header backUrl="/tabs/tab3/Profile" pageName="Eventos semanales"></app-header>
+
+<ion-content  class="ion-padding-horizontal">
+  <div class="eventsContainer">
+    <app-event   *ngFor="let event of events"  class="eventCard" [event]="event"></app-event>
+  </div>
+</ion-content>

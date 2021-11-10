@@ -1,0 +1,84 @@
+/*
+font related paramters
+*/
+
+@import "../../../theme/FontsTheme.scss";
+/*
+Color related parameters
+*/
+@import "../../../theme/ColorTheme.scss";
+/*
+Image related configurations
+*/
+@import "../../../theme/ImageTheme.scss";
+$avatar-width: 20;
+/* 
+Buttons
+*/
+@import "../../../theme/Button.scss";
+/*
+Spaces
+*/
+@import "../../../theme/spaces.scss";
+/*
+General variables 
+*/
+@import "../../../theme/General.scss";
+
+.containerProfilePage{
+        padding: 0px 20px;
+}
+
+.containerAvatar {
+        @extend .displayFlexCol;
+        padding-top: 5vh;
+        .LabelAvatar {
+                @extend .header-L;
+                margin-top: 1rem;
+                margin-bottom: $font-size-XL;
+        }
+}
+.thumbnailStyle{
+        @extend .displayFlexCol;
+        color:$color-primary; 
+        font-size:$font-size-L*1.2; 
+}
+.iconProfile{
+        color:$color-primary; 
+}
+.iconProfile-mango{
+        // $color-primary-contrast-mango  este color es rojo
+        color:$color-primary-contrast-mango; 
+}
+
+.iconProfile-mango{
+        // $color-primary-contrast-mango  este color es rojo
+        color:$color-primary-contrast-miquel; 
+}
+
+.bottom-border{
+        border-bottom: 1px solid lightgray ;
+}
+.padding-vertical{
+        @extend .padding-top-10; // -10 px
+        @extend .padding-bottom-10; //-10px
+}
+
+.padding-hortizontal{
+        @extend .padding-right-10;
+        @extend .padding-left-10;
+}
+.displayFlex{
+        width:100%;
+        flex-wrap: wrap;
+        
+}
+.item1{
+        flex: 1 1 10%;
+}
+.item2{
+        flex: 1 1 80%;
+}
+.item3{
+        flex: 1 1 10%;
+}

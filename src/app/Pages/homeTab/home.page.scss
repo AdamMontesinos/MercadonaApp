@@ -1,0 +1,49 @@
+@import "../../../theme/Inputs_Theme.scss";
+@import "../../../theme/Button.scss";
+@import "../../../theme/FontsTheme.scss";
+
+.tab-selected {
+        color: $color-primary;
+        border-bottom: 2px solid $color-primary;
+}
+
+.tab-selected-mango {
+        color: $color-primary-contrast-mango;
+        border-bottom: 2px solid $color-primary-mango;
+}
+
+.tab-selected-miquel {
+        color: $color-primary-contrast-miquel;
+        border-bottom: 2px solid $color-primary-miquel;
+}
+
+.searchBarProducts{
+        font-weight: bold;
+        color:$color-primary;
+        width: 100%;
+}
+
+.searchBarProducts-mango{
+        font-weight: bold;
+        color:$color-primary-contrast-mango;
+        width: 100%;
+}
+
+.searchBarProducts-miquel{
+        font-weight: bold;
+        color:$color-primary-contrast-miquel;
+        width: 100%;
+}
+
+.searchBar {
+        display: block;
+        width: 80%;
+        padding: 1px;
+        margin: auto;
+}
+.localtabs {
+        height: 30px;
+}
+.tabs-stable {
+        margin-top: 60px;
+}

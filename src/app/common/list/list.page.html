@@ -1,0 +1,20 @@
+<app-header backUrl="/tabs/tab3/Profile" pageName="Mis compras"></app-header>
+
+<ion-content class="ion-padding-horizontal">
+  <ion-list>
+    <ion-item *ngFor = "let compra of ListaCompras">
+      <ion-col size="9">
+        <p class="normalText-M " > {{compra.date}}</p>
+        <p class ="description-S">{{compra.place}} </p>
+      </ion-col>
+      <ion-col size="3">
+        <br>
+        <p class="header-XS" 
+        [ngClass]="compra.estado=='Recogida'? 'RedColor': 'GreenColor'">
+        <!-- [ngClass]=" {'RedColor' : compra.estado=='Recogida', 'GreenColor' : compra.estado=='Pendiente'}"> -->
+          {{compra.estado}}
+        </p>
+      </ion-col>
+    </ion-item>
+  </ion-list>
+</ion-content>

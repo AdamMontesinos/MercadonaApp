@@ -1,0 +1,179 @@
+@import '../../../theme/ColorTheme.scss'; 
+
+//POP UP
+.popUp{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $color-primary;
+    visibility: visible;
+    z-index: 1;
+}
+
+.popUp:hover{
+    visibility: hidden;
+}
+
+.popUp img{
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50px;
+}
+
+.popUp h6{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+//cuarto contenedor listado
+.fila_primera{
+    background: #F5F5F5;
+}
+.listado{
+    clear: both;
+}
+.listado table{
+    width: 100%;
+}
+.listado h1{
+    font-weight: bold;
+}
+.listado th{
+    padding:12px;
+    text-align: left;
+    color: black;
+}
+.listado td{
+    font-weight: bold;
+    color: black;
+    padding: 12px;
+}
+td img{
+    float: left;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+//tercer contenedor el de los QR
+.qr{
+    margin-bottom: 40px;
+    background-color: none;
+    position: relative;
+    float: right; 
+    width: 45%;   
+}
+
+.qr h5{
+    text-align: right;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.qr img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 60%;
+    height: 500px;
+}
+
+.qr button{
+    display: block;
+    background-color: $color-primary;
+    height: 50px;
+    width: 100%;
+}
+
+// segundo contenedor:info_empleado
+.info_empleado{
+    float: left;
+    width: 50%;
+    margin-left: 40px;
+}
+.info_empleado img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.info_empleado h1{
+    font-weight: bold;
+}
+span{
+    font-weight: bold;
+}
+.info_empleado h3{
+    font-weight: bold;
+    font-size: medium;
+}
+
+.search{
+    position: relative;
+}
+input{
+    border-radius: 24px;
+    padding: 5px;
+    width: 80%;
+    color: #757575;
+    border: 2px solid #E0E0E0;
+}
+input[placeholder]{
+    padding-left: 40px;
+}
+.search img{
+    position: absolute;
+    left: 10px;top: 6px;
+    width: 20px;height: 20px;
+}
+
+.info_empleado p{
+    width: 50%;
+}
+
+//primero contenedor el de los logos
+.primero{
+    position: relative;
+    height: 100px;
+}
+.menu{
+    position: absolute;
+    left:5px;
+    top:34px;
+    width: 25px;
+    height: 25px;
+}
+.logo{
+    position: absolute;
+    right: 20px;
+    height: 60%;
+    width: 4%;
+    top:20px;
+}
+
+
+@media screen and (max-width:780px){
+    .info_empleado{
+        width: 100%;
+    }
+    .qr{
+        background-color: none;
+        position: relative;
+        width: 100%;   
+    }
+    .qr h5{
+        text-align: center;
+        font-weight: bold;
+    }
+    .logo{
+        position: absolute;
+        right: 20px;
+        height: 50%;
+        width: 10%;
+        top:20px;
+    }
+}

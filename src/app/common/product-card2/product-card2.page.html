@@ -1,0 +1,13 @@
+<div class="cardContainer ion-padding-horizontal">
+  <h2 *ngIf="news.title"></h2>
+  <h5>{{news.description}}</h5>
+  <p (click)="onClick()"style="color:green">
+    <ion-icon *ngIf="!liked" name="heart-outline"></ion-icon>
+    <ion-icon *ngIf="liked" name="heart"></ion-icon>
+    Añadir a favoritos
+  </p>
+  <div class="displayFlex img-Wrapper">
+    <img style="border-radius: 10px;" 
+    [src]="news.url">
+  </div>
+</div>

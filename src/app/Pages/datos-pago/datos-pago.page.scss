@@ -1,0 +1,12 @@
+@import "../../../theme/Button.scss";
+@import "../../../theme/FontsTheme.scss";
+
+img{margin: 4px;}
+.plus{position: absolute; right: 1px;}
+div{margin: auto;width: 70%;position: relative;border-radius: 10px;}
+.dos2{width: 70%;height: 160px; margin-bottom: 10px; border: solid green 4px;}
+.dos{width: 70%;height: 54px; margin-bottom: 10px; border: solid green 4px;}
+.edit{position: absolute;right: 10px;}
+.deliver{position: absolute;top: 1px;}
+.deliver2{position: absolute; top:10px;left: 50px;}
+ion-label{font-weight: bold;}

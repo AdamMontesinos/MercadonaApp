@@ -1,0 +1,35 @@
+<app-header pageName="Pago" backUrl="payout"></app-header>
+
+<ion-content class="ion-padding">
+  <div name="cardInfoContainer" class="ion-padding description-M">
+
+    <div>
+    <div>
+      <p class="pElem">Nº Tarjeta: </p>
+      <div class="input-Wrapper">
+        <label for="number"><span class="material-icons"> credit_card </span></label>
+        <input type="number" class="inputElem" [(ngModel)]="cardNumber" id="number" placeholder="Enter your card number...">
+      </div>
+    </div>
+    <div>
+      <p class="pElem">Caducidad: </p>
+      <div class="input-Wrapper">
+        <label for="month"><span class="material-icons"> event </span></label>
+        <input [(ngModel)]="month" type="number" min="01" max="12" maxlength="2"  class="inputElem" style="text-align: center" id="month"   placeholder="mm">
+        <input [(ngModel)]= "year" type="number" min="21" max="30" maxlength="2" class="inputElem" style="text-align: center" id="year"   placeholder="aa">
+      </div>
+    </div>
+    <div >
+      <p class="pElem">Cód. Seguridad: </p>
+      <div class="input-Wrapper">
+        <label for="CVV"><span class="material-icons-outlined"> lock </span></label>
+        <input [(ngModel)]="CVV" class="inputElem" size="3" style="text-align: center" id="CVV" min="0000" max="9999" maxlength="4"  type="password" placeholder="***">
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="displayFlex">
+    <button (click)="clickBtnConfirm()" slot="end" [ngClass]="buttonStyle" >Confirmar Pago</button>
+  </div>
+</ion-content>

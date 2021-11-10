@@ -1,0 +1,24 @@
+<ion-split-pane contentId="menu" class="prueba">
+
+
+    <ion-menu contentId="menu" menuId="first">
+
+      <ion-list class="ion-margin-vertical">
+        
+        <ion-menu-toggle auto-hide="true" menu="first">
+          <ion-item routerLink="Profile" routerLinkActive="">
+            <ion-label>Home</ion-label>
+        </ion-item>
+        
+        </ion-menu-toggle>
+        <ion-item routerLink="/Profile" routerLinkActive="">
+          <ion-label>Go to home</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-menu>
+
+  <ion-router-outlet id="menu">
+  </ion-router-outlet>
+
+</ion-split-pane>

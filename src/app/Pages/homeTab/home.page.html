@@ -1,0 +1,31 @@
+<app-header pageName="Productos" backUrl="home"></app-header>
+
+<ion-content fullscreen="true" class="ion-padding-horizontal">
+
+  <ion-content [fullscreen]="false">
+
+    <div class="searchBar">
+      <ion-searchbar [ngClass]="diseno_buscador" (ionChange)="Buscar($event)"></ion-searchbar> 
+    </div>
+
+  
+    <ion-tabs class="tabs-stable tabs-icon-top">
+      <ion-tab-bar class="localtabs" slot="top">
+
+        <ion-tab-button [routerLink]='["/news"]' [ngClass]="diseno_menu">
+          <ion-label>Favoritos</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]='["/tabs/Home/productos"]' [ngClass]="diseno_menu">
+          <ion-label>Todo</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]='["/news"]' [ngClass]="diseno_menu">
+          <ion-label>Novedades</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
+  </ion-content>
+  
+</ion-content>

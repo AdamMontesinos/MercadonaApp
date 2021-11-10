@@ -1,0 +1,29 @@
+Comentados:
+*login(poco que hablar es pagina con 2 botones(listo para comer))
+*productos(es una pagina que contiene una lista receptora de la lista que me viene de la observable producto de la suscripción)
+*bbdd-service(son los productos que ya estan en los carritos(tanto de listo para comer como de pagina productos))
+*search-productos(son los productos de muestra de "listo para comer" y la pagina "productos")
+*gracias(no es necesario comentarla es muy pequeña)
+*datos-pago(pocas cosas le faltan y el codigo es basico)
+*cartTab(basicamente solo tiene una suscripcion y metodo para añadir,eliminar del carrito).
+*homeTab(es el buscador y sus botones:novedades y todo en el typescript no tiene basicamente nada)
+*profile(esta completamente finalizado:solo son una lista y la imagen de marie y su nombre)
+*profileTab(son son 2 botones uno es el del nav bar y otro el de la barra lateral que sale en el perfil)
+*recogida(esta perfectamente)
+*payout(esta bien solo que debemos hacer que use una hora real otra cosa es que usamos un numero de telefono
+que no lo cogemos de ningun sitio)
+*datos-pago(es lo mismo que payout solo que simran no se ha fijado que yo ya la tenia hecha y la hizo el de nuevo)
+*checkout(es la pagina donde compras un producto de listo para comer)
+*listo_para_comer(no tiene mucha ciencia son un par de suscripciones y un modal)
+*news(es la pagina novedades se encuentra en el perfil del usuario).
+*news(es la pagina de eventos semanales solamente tiene una suscripcion).
+*info-products(es la pagina emergente cuando tu clicas un productos y te abre una pantalla con sus detalles)
+*tab4(es la pantalla de setting)
+
+Por hacer:
+*buscador
+*mandar de novedades a news
+
+Conexiones:
+productos --> search-productos.ts
+producto-card.page.ts --> bbdd.service.ts 

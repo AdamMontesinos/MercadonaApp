@@ -1,0 +1,22 @@
+/*
+Color related parameters
+*/
+@import "../../theme/ColorTheme.scss";
+
+.tab-selected {
+        color: $color-primary;
+        // border-bottom: 1px solid green;
+}
+// @media screen and (max-width: 1000px){
+//         ion-tab-button{
+//                 display: none;
+//         }
+// }
+
+.tab-mango{
+        color:$color-primary-contrast-mango;
+}
+
+.tab-miquel{
+        color:$color-primary-contrast-miquel;
+}

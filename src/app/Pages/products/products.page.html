@@ -1,0 +1,7 @@
+<ion-content collapse="condense" fullscreen="false" class="ion-no-border">
+
+  <div class="productsContainer">
+    <app-productos-card *ngFor="let foundProduct of productosDisponibles | filtro:textoBuscar" class="product" [producto]="foundProduct">
+    </app-productos-card>
+  </div>
+</ion-content>

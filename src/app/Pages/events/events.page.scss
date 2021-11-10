@@ -1,0 +1,15 @@
+.eventCard{
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  width: 100%;
+  max-width: 325px;
+}
+.eventsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: center;
+
+}

@@ -1,0 +1,28 @@
+<ion-row  style="height: 20px;">
+  <ion-col class="ion-justify-content-center displayFlex" size="2"> 
+    <span class="material-icons"[ngClass]="event.available ? 'greenColor': 'redColor'">circle </span> 
+  </ion-col>
+  <ion-col  size="5">
+    <ion-label class="header-S">{{event.day.toLocaleDateString()}}</ion-label>
+  </ion-col>
+  <ion-col size="5"> 
+    <ion-label *ngIf="event.available" class="header-M greenColor"> Disponible</ion-label>
+    <ion-label *ngIf="!event.available" class="header-M redColor"> Cerrado</ion-label>
+  </ion-col>
+</ion-row>
+<ion-row style="overflow: hidden;">
+  <ion-col class="displayFlexCol imgContainer" push="2" size="5">
+    <img class="imgproducto" style="border-radius: 10px; width: max-content;" [src]="event.url" [routerLink]='["/inscribir"]'>
+  </ion-col>
+  <ion-col  push="2" size="5"> 
+    <p class="header-S">{{event.title}}</p>
+    <p class="description-S">
+      <span class="material-icons-outlined icon">location_on</span> 
+      {{event.place}}
+    </p>
+    <p class="description-S">     
+      <span class="material-icons-outlined icon">phone</span> 
+      {{event.phone}}
+    </p>
+  </ion-col>
+</ion-row>

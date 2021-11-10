@@ -1,0 +1,112 @@
+/*
+font related paramters
+- family
+- size
+- weight
+- color
+*/
+@mixin labels_custom_design {
+      display: block;text-align: center;font-family: $font-family-1 ;font-weight: $font-weight-bold;
+}
+@mixin title_custom_design {
+        display: block;text-align: center;font-family: $font-family-1;font-style: $font-weight-normal;
+        font-weight: $font-weight-bold; font-size:x-large; color: #212121; margin-top: 20px; margin-bottom: 20px;
+}
+
+// 3 font families
+$font-family-1: "Inter", "sans-serif";
+$font-family-2: "Arial", "sans-serif";
+$font-family-3: "Oxygen", "sans-serif";
+
+// 6 font-size
+$font-size-XXL: 4rem;
+$font-size-XL: 2.5rem;
+$font-size-L: 1.2rem;
+$font-size-M: 1rem;
+$font-size-S: 0.8rem;
+$font-size-XS: 0.5rem;
+// 3 font-weight
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$font-weight-bolder: 900;
+
+//6 different color
+$font-color-main:  #00AB61 ;
+$font-color-main-mango:  #c71111;
+$font-color-secondary: blue;
+$font-color-third: lightblue;
+
+$font-color-red: Red;
+$font-color-black: black;
+$font-color-white: white;
+$font-color-gray: #767676;
+
+.hideTextOverFlow {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+}
+
+.header {
+        &-XXL {
+                font-weight: $font-weight-bolder;
+                font-size: $font-size-XXL;
+        }
+        &-XL {
+                font-weight: $font-weight-bold;
+                font-size: $font-size-XL;
+        }
+        &-L {
+                font-weight: $font-weight-bold;
+                font-size: $font-size-L;
+        }
+        &-M {
+                font-weight: $font-weight-bold;
+                font-size: $font-size-M;
+        }
+        &-S {
+                font-weight: $font-weight-bold;
+                font-size: $font-size-S;
+        }
+        &-XS {
+                font-weight: $font-weight-bold;
+                font-size: $font-size-S;
+        }
+}
+.description {
+        &-M {
+                font-size: $font-size-M;
+                color: $font-color-gray;
+                font-weight: 100;
+        }
+        &-S {
+                font-size: $font-size-S;
+                color: $font-color-gray;
+                font-weight: 100;
+        }
+        &-XS {
+                font-size: $font-size-XS;
+                color: $font-color-gray;
+                font-weight: 100;
+        }
+}
+.normalText {
+        &-M {
+                font-size: $font-size-M;
+                color: $font-color-black;
+        }
+        &-S {
+                font-size: $font-size-S;
+                color: $font-color-black;
+        }
+        &-XS {
+                font-size: $font-size-XS;
+                color: $font-color-black;
+        }
+}
+.labels{
+        @include labels_custom_design;
+}
+.titulo{
+        @include title_custom_design;
+}

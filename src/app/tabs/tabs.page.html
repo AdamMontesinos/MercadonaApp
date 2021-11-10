@@ -1,0 +1,27 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button [ngClass]="diseno_iconos" tab="Home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Products</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [ngClass]="diseno_iconos" tab="Cart">
+      <ion-badge *ngIf="NumberProductsInCart>0" style="background-color: black;">{{NumberProductsInCart}}</ion-badge>
+      <ion-icon name="cart"></ion-icon>
+      <ion-label>Cart</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [ngClass]="diseno_iconos" tab="tab3">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [ngClass]="diseno_iconos" tab="tab4">
+      <ion-icon name="options"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>

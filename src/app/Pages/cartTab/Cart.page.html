@@ -1,0 +1,57 @@
+<app-header pageName="Carrito" backUrl="home"></app-header>
+
+<ion-content [fullscreen]="true" class=" ion-padding-horizontal">
+
+  <div class="productContainer" *ngIf="AnyProduct()">
+    <ion-list>
+      <ion-item lines="none" class="ion-padding-vertical ion-no-padding products" *ngFor="let product of ProductList">
+        <!-- <ion-avatar slot="start"> -->
+        <ion-thumbnail class="thumbnail" slot="start">
+          <!-- <img src="https://www.bing.com/th?id=OIP.dHUTEw_5Gt2GWE_pdWS8rwHaFj&w=200&h=149&rs=1&qlt=80&o=6&dpr=1.1&pid=3.1"> -->
+          <img class="imgProduct" [src]="product.url">
+        </ion-thumbnail>
+        <ion-label>
+          <h2 class="productName">{{product.name}}</h2>
+          <p class="description-S">1kg, price</p>
+
+          <div class="containerQuantityButtons">
+
+            <ion-icon [ngClass]="button_mas_menos" (click)="DecrementPrice(product)"
+             [hidden]="product.quantity < 2"  slot="icon-only" name="remove"></ion-icon>
+
+            <!--Cantidades elegidas de ese producto-->
+            <h5 class="header-S" style="display: inline;margin: 0px 20px; "> {{product.quantity}} </h5>
+
+            <ion-icon (click)="IncrementPrice(product)"
+             [ngClass]="button_mas_menos" slot="icon-only" name="add"></ion-icon>
+
+          </div>
+        </ion-label>
+
+        <ion-col class="ion-text-end ion-no-padding" size="3">
+          <span (click)="DeleteProductFromCart(product)" class="material-icons iconDelete">
+            delete_outline
+          </span>
+          <h3 class=" pricetxt hideTextOverFlow">{{product.price}}€</h3>
+        </ion-col>
+
+      </ion-item>
+
+    </ion-list>
+    <div class="displayFlex">
+      <button [routerLink]='["/recogida"]' slot="end" [ngClass]="button_tramitar">Tramitar el pedido</button>
+    </div>
+  </div>
+
+  <div class="productContainer" *ngIf="!AnyProduct()">
+    <ion-item>
+      <br>
+      <h2 class="header-M">No has seleccionado ningún producto</h2>
+      <br>
+      <ion-button>
+        <ion-icon slot="icon-only" name="sad"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+
+</ion-content>

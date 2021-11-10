@@ -1,0 +1,15 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-header class="ion-no-border displayFlex ion-padding-horizontal">
+  <div style="width:10%">
+    <ion-buttons slot="start">
+      <ion-back-button class="description-S" size="small" text="" icon="arrow-back-outline" color="dark" [defaultHref]="backUrl">
+      </ion-back-button>
+    </ion-buttons>
+  </div>
+  <div  *ngIf="pageName" class="header-L displayFlex" style="width:80%">{{pageName}}</div>
+  <div style="width:10%"></div>
+</ion-header>

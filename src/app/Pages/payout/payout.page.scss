@@ -1,0 +1,72 @@
+@import "../../../theme/All.scss";
+@import "../../../theme/Button.scss";
+@import "../../../theme/ColorTheme.scss";
+
+.price-tag{
+  direction: rtl;
+}
+
+.main-color{
+  color:$font-color-main;
+}
+
+.main-color-mango{
+  color:$font-color-main-mango;
+}
+
+
+.btnTramitar {
+  @extend .btnMediumRound;
+  position: fixed;
+  bottom: 5vh;
+}
+
+.btnTramitar-mango {
+  @extend .btnMediumRound-mango;
+  position: fixed;
+  bottom: 5vh;
+}
+
+.btnTramitar-miquel {
+  @extend .btnMediumRound;
+  position: fixed;
+  bottom: 5vh;
+  background-color: $color-primary-contrast-miquel;
+}
+
+.inner-description{
+  margin:unset;
+  margin-bottom: 5px;
+}
+ion-row > ion-col{
+  @extend .normalText-S;
+}
+ion-grid  p {
+  margin:unset;
+  margin-bottom: 10px;
+}
+
+.btnTramitar {
+  @extend .btnMediumRound;
+  position: fixed;
+  bottom: 5vh;
+}
+.inputNum > .native-input{
+  padding:unset;
+  margin:unset;
+  margin-bottom: 5px;
+}
+.bottomborder{
+  border-bottom: 1px solid $font-color-main;
+}
+
+.location{
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 800px){
+  .location{
+    flex-direction: row;
+  }
+  
+}
